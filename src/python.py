@@ -28,5 +28,5 @@ novos_clientes = pd.read_csv('data/novos_clientes_para_prever.csv')
 entrada_novos_cliente = novos_clientes[['tempo_uso_meses','numero_reclamacoes','atrasos_pagamento','usou_suporte']]
 previsoes_novos_cliente = modelo.predict(entrada_novos_cliente)
 novos_clientes['previsao_cancelamento'] = previsoes_novos_cliente
-novos_clientes.to_csv('data/novos_clientes_para_prever_feito')
+novos_clientes.to_csv('data/novos_clientes_para_prever_feito.csv')
 print('Abra o arquivo "novos_clientes_para_prever_feito.csv" para verificar a previsão de cancelmaneto dos clientes!')
