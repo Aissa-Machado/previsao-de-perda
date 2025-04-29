@@ -23,6 +23,7 @@ print(f'A precisao foi de {precisao*100:.2f} %')
 print('Previsoẽs', previsoes)
 print('Respostas corretas', saida_test)
 
+#utilizando o modelo criado para prever cancelamento de novos cliente
 novos_clientes = pd.read_csv('data/novos_clientes_para_prever.csv')
 entrada_novos_cliente = novos_clientes[['tempo_uso_meses','numero_reclamacoes','atrasos_pagamento','usou_suporte']]
 previsoes_novos_cliente = modelo.predict(entrada_novos_cliente)
